@@ -1,0 +1,5 @@
+# ninja log v6
+1	29	1767180692801988586	CMakeFiles/ground_station.dir/mesh_network_manager.c.o	fc618f28a8fd60fe
+40	59	1767180812219514965	ground_station	b2284dd84ac50c40
+1	40	1767180812182848036	CMakeFiles/ground_station.dir/main.c.o	7cad7cf6dc1b0803
+1	24	1767181117518331483	build.ninja	4ab75bc063294cd7
