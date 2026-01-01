@@ -66,12 +66,101 @@ build CMakeFiles/ground_station.dir/main.c.o: C_COMPILER__ground_station_unscann
 build ground_station: C_EXECUTABLE_LINKER__ground_station_Debug CMakeFiles/ground_station.dir/main.c.o
   DEP_FILE = CMakeFiles/ground_station.dir/link.d
   FLAGS = -g
-  LINK_FLAGS = -rdynamic  -Wl,--dependency-file=CMakeFiles/ground_station.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/ground_station.dir/link.d
   OBJECT_DIR = CMakeFiles/ground_station.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = ground_station
   TARGET_PDB = ground_station.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target packet_router
+
+
+#############################################
+# Order-only phony target for packet_router
+
+build cmake_object_order_depends_target_packet_router: phony || .
+
+build CMakeFiles/packet_router.dir/Packet_Router/main.c.o: C_COMPILER__packet_router_unscanned_Debug /home/royivri/CLionProjects/ground_station/Packet_Router/main.c || cmake_object_order_depends_target_packet_router
+  DEP_FILE = CMakeFiles/packet_router.dir/Packet_Router/main.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/packet_router.dir
+  OBJECT_FILE_DIR = CMakeFiles/packet_router.dir/Packet_Router
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target packet_router
+
+
+#############################################
+# Link the executable packet_router
+
+build packet_router: C_EXECUTABLE_LINKER__packet_router_Debug CMakeFiles/packet_router.dir/Packet_Router/main.c.o
+  DEP_FILE = CMakeFiles/packet_router.dir/link.d
+  FLAGS = -g
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/packet_router.dir/link.d
+  OBJECT_DIR = CMakeFiles/packet_router.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = packet_router
+  TARGET_PDB = packet_router.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target uart_manager
+
+
+#############################################
+# Order-only phony target for uart_manager
+
+build cmake_object_order_depends_target_uart_manager: phony || .
+
+build CMakeFiles/uart_manager.dir/UART_/main.c.o: C_COMPILER__uart_manager_unscanned_Debug /home/royivri/CLionProjects/ground_station/UART_/main.c || cmake_object_order_depends_target_uart_manager
+  DEP_FILE = CMakeFiles/uart_manager.dir/UART_/main.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/royivri/CLionProjects/ground_station/UART_
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
+
+build CMakeFiles/uart_manager.dir/UART_/uart_init.c.o: C_COMPILER__uart_manager_unscanned_Debug /home/royivri/CLionProjects/ground_station/UART_/uart_init.c || cmake_object_order_depends_target_uart_manager
+  DEP_FILE = CMakeFiles/uart_manager.dir/UART_/uart_init.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/royivri/CLionProjects/ground_station/UART_
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
+
+build CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o: C_COMPILER__uart_manager_unscanned_Debug /home/royivri/CLionProjects/ground_station/UART_/rx_thread.c || cmake_object_order_depends_target_uart_manager
+  DEP_FILE = CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/royivri/CLionProjects/ground_station/UART_
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
+
+build CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o: C_COMPILER__uart_manager_unscanned_Debug /home/royivri/CLionProjects/ground_station/UART_/tx_thread.c || cmake_object_order_depends_target_uart_manager
+  DEP_FILE = CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/royivri/CLionProjects/ground_station/UART_
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target uart_manager
+
+
+#############################################
+# Link the executable uart_manager
+
+build uart_manager: C_EXECUTABLE_LINKER__uart_manager_Debug CMakeFiles/uart_manager.dir/UART_/main.c.o CMakeFiles/uart_manager.dir/UART_/uart_init.c.o CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o
+  DEP_FILE = CMakeFiles/uart_manager.dir/link.d
+  FLAGS = -g
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/uart_manager.dir/link.d
+  LINK_LIBRARIES = -lpthread
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = uart_manager
+  TARGET_PDB = uart_manager.dbg
 
 
 #############################################
@@ -107,12 +196,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/royivri/CLionProjects/ground_station/cmake-build-debug
 
-build all: phony ground_station
-
-# =============================================================================
-# Unknown Build Time Dependencies.
-# Tell Ninja that they may appear as side effects of build rules
-# otherwise ordered by order-only dependencies.
+build all: phony ground_station packet_router uart_manager
 
 # =============================================================================
 # Built-in targets

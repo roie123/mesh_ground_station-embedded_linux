@@ -1,5 +1,17 @@
 # ninja log v6
+0	18	1767191999345415013	CMakeFiles/ground_station.dir/UART_/uart_manager.c.o	d414b781e1086661
+1	21	1767257993024788268	CMakeFiles/mesh_network_manager.dir/mesh_network_manager.c.o	2de45d5f323da1c4
+1	14	1767257993024788268	CMakeFiles/uart_manager.dir/UART_/uart_manager.c.o	b6045076dab8c1a7
+1	16	1767258119772389832	uart_manager	e54b3075ce2c1b9a
+18	33	1767258174312773710	packet_router	8379283c305efdcd
+1	26	1767257993024788268	CMakeFiles/uart_manager.dir/UART_/uart_init.c.o	7e5ab6308b3c1e77
+0	26	1767261415371706628	build.ninja	4ab75bc063294cd7
+1	18	1767258174292773571	CMakeFiles/packet_router.dir/Packet_Router/main.c.o	22c6ffaba4979ed9
+1	25	1767260950012164659	CMakeFiles/ground_station.dir/main.c.o	7cad7cf6dc1b0803
+1	40	1767261369011454120	CMakeFiles/uart_manager.dir/UART_/main.c.o	acf11e5bf70e5a8d
+25	43	1767260950035498142	ground_station	baea07fb5f0b3757
 1	29	1767180692801988586	CMakeFiles/ground_station.dir/mesh_network_manager.c.o	fc618f28a8fd60fe
-40	59	1767180812219514965	ground_station	b2284dd84ac50c40
-1	40	1767180812182848036	CMakeFiles/ground_station.dir/main.c.o	7cad7cf6dc1b0803
-1	24	1767181117518331483	build.ninja	4ab75bc063294cd7
+1	20	1767261417005048910	CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o	ccdc3a84396bcf80
+1	20	1767261417005048910	CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o	99e4318b07b2588e
+1	26	1767261417001715559	CMakeFiles/uart_manager.dir/UART_/uart_init.c.o	7e5ab6308b3c1e77
+26	41	1767261417028382371	uart_manager	6c03450ff67b324e

@@ -2,9 +2,7 @@
 // Created by royivri on 12/31/25.
 //
 
-#include "mesh_network_manager.h"
+#include "packet_router.h"
 
 #include <signal.h>
-#include <stdio.h>
 #include <unistd.h>
-

@@ -5,7 +5,7 @@
 #ifndef PACKET_ROUTER_H
 #define PACKET_ROUTER_H
 
-extern volatile static int running;
+extern volatile static int packet_router_running;
 
 void packet_router_handle_signal(int signal);
 void packet_router_process();

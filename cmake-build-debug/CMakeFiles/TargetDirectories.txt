@@ -1,3 +1,5 @@
 /home/royivri/CLionProjects/ground_station/cmake-build-debug/CMakeFiles/ground_station.dir
+/home/royivri/CLionProjects/ground_station/cmake-build-debug/CMakeFiles/packet_router.dir
+/home/royivri/CLionProjects/ground_station/cmake-build-debug/CMakeFiles/uart_manager.dir
 /home/royivri/CLionProjects/ground_station/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/royivri/CLionProjects/ground_station/cmake-build-debug/CMakeFiles/rebuild_cache.dir
