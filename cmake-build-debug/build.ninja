@@ -143,6 +143,13 @@ build CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o: C_COMPILER__uart_manager_
   OBJECT_DIR = CMakeFiles/uart_manager.dir
   OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
 
+build CMakeFiles/uart_manager.dir/UART_/rx_queue.c.o: C_COMPILER__uart_manager_unscanned_Debug /home/royivri/CLionProjects/ground_station/UART_/rx_queue.c || cmake_object_order_depends_target_uart_manager
+  DEP_FILE = CMakeFiles/uart_manager.dir/UART_/rx_queue.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/royivri/CLionProjects/ground_station/UART_
+  OBJECT_DIR = CMakeFiles/uart_manager.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart_manager.dir/UART_
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target uart_manager
@@ -151,7 +158,7 @@ build CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o: C_COMPILER__uart_manager_
 #############################################
 # Link the executable uart_manager
 
-build uart_manager: C_EXECUTABLE_LINKER__uart_manager_Debug CMakeFiles/uart_manager.dir/UART_/main.c.o CMakeFiles/uart_manager.dir/UART_/uart_init.c.o CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o
+build uart_manager: C_EXECUTABLE_LINKER__uart_manager_Debug CMakeFiles/uart_manager.dir/UART_/main.c.o CMakeFiles/uart_manager.dir/UART_/uart_init.c.o CMakeFiles/uart_manager.dir/UART_/rx_thread.c.o CMakeFiles/uart_manager.dir/UART_/tx_thread.c.o CMakeFiles/uart_manager.dir/UART_/rx_queue.c.o
   DEP_FILE = CMakeFiles/uart_manager.dir/link.d
   FLAGS = -g
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/uart_manager.dir/link.d

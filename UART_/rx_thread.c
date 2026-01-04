@@ -4,24 +4,40 @@
 
 #include "rx_thread.h"
 
+#include <errno.h>
 #include <signal.h>
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 
+#include "rx_queue.h"
+#include "uart_globals.h"
 
-extern  volatile sig_atomic_t uart_process_running;
 void* rx_thread(void* arg) {
-    int fd = *(int*)arg;
-    char buf[128];
+    unsigned char rx_buffer[256];
+    ssize_t bytes_read;
 
     while (uart_process_running) {
-        int n = read(fd, buf, sizeof(buf) - 1);
-        if (n > 0) {
-            buf[n] = '\0';
-            printf("[RX] %s\n", buf);  // or process the data
+        // Read data from UART
+        bytes_read = read(uart_fd, rx_buffer, sizeof(rx_buffer));
+
+        if (bytes_read > 0) {
+            // Process received data
+            for (ssize_t i = 0; i < bytes_read; i++) {
+                if (!rx_queue_push(&rx_queue, rx_buffer[i])) {
+                    fprintf(stderr, "RX queue full, data lost!\n");
+                    break;
+                }
+            }
+        } else if (bytes_read < 0) {
+            if (errno != EAGAIN && errno != EWOULDBLOCK) {
+                fprintf(stderr, "UART read error: %s\n", strerror(errno));
+                break;
+            }
+            usleep(1000);
         }
-        usleep(1000);  // small delay to avoid 100% CPU
     }
 
     return NULL;
 }
+

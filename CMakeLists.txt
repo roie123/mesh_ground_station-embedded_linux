@@ -24,6 +24,7 @@ add_executable(uart_manager
         UART_/uart_init.c
         UART_/rx_thread.c
         UART_/tx_thread.c
+        UART_/rx_queue.c
 )
 
 target_include_directories(uart_manager PRIVATE UART_)

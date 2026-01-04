@@ -4,8 +4,10 @@
 
 #ifndef RX_THREAD_H
 #define RX_THREAD_H
+#include "rx_queue.h"
 
 
+extern RxQueue rx_queue;
 
 
 void* rx_thread(void *args);

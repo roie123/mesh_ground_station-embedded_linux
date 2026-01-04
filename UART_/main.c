@@ -12,6 +12,11 @@
 #include "tx_thread.h"
 #include "uart_init.h"
 #include <pthread.h>
+#include "uart_globals.h"
+#include "rx_queue.h"
+volatile sig_atomic_t uart_process_running = 1;
+int uart_fd = -1;
+RxQueue rx_queue;
 
 
 void handle_signal_uart(int sig) {
@@ -26,6 +31,8 @@ int main(int argc, char *argv[]) {
         perror("uart_init failed");
         return 1;
     }
+    // Initialize RX queue
+    rx_queue_init(&rx_queue);
 
     pthread_t rx_tid, tx_tid;
 
@@ -44,6 +51,10 @@ int main(int argc, char *argv[]) {
 
     while (uart_process_running) {
 
+        char data;
+        if (rx_queue_pop(&rx_queue, &data)) {
+            printf("Received: 0x%02X\n", (unsigned char)data);
+        }
 
 
 

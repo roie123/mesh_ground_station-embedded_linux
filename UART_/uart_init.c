@@ -11,9 +11,8 @@
 #include <errno.h>
 #include <signal.h>
 #include <string.h>
+#include "uart_globals.h"
 
-
-volatile sig_atomic_t uart_process_running = 1;
 
 void handle_signal(int sig) {
     uart_process_running = 0;
@@ -78,6 +77,9 @@ int uart_init(const char *device, int baudrate) {
         close(fd);
         return -1;
     }
+
+    uart_fd = fd;
+    uart_process_running = 1;
 
     return fd;
 }
